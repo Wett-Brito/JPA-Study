@@ -9,6 +9,11 @@
 <!--    <mapping-file>META-INF/consultas.xml</mapping-file>-->
 
 		<class>modelo.basico.Usuario</class>
+		<class>modelo.basico.Produto</class>
+		<class>modelo.umpraum.Cliente</class>
+		<class>modelo.umpraum.Assento</class>
+		
+
         
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
