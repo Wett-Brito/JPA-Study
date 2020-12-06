@@ -59,6 +59,18 @@ public class DAO<E> {
 		return obterTodos(10, 0);
 	}
 	
+	public List<E> consultar(String nomeConsulta, Object... params){
+		TypedQuery<E> query = em.createNamedQuery(nomeConsulta, classe);
+		
+		for (int i = 0; i < params.length; i+= 2) {
+			query.setParameter(params[i].toString(), params[i + 1]);
+		}
+		
+		return query.getResultList();
+	}
+	
+
+	
 	public List<E> obterTodos(int qtde, int deslocamento) {
 		
 		if(classe == null) {
